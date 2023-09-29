@@ -538,13 +538,8 @@ select {
 }
 
 .accordion__content {
-  /* display: none; */
   margin-bottom: 1rem;
 }
-
-/* .accordion__content.visible {
-  display: block;
-} */
 
 .accordion__ul {
   display: flex;
@@ -687,14 +682,16 @@ select {
 
 .fs-350 {
   font-size: var(--fs-350);
-} /* fs-button */
+}
+
 .fs-400 {
   font-size: 1rem;
 }
 
 .fs-450 {
   font-size: var(--fs-450);
-} /* fs-button */
+}
+
 .fs-500 {
   font-size: var(--fs-500);
 }

@@ -14,12 +14,3 @@ navToggle.addEventListener("click", () => {
     document.body.classList.remove("primary-navigation-open");
   }
 });
-
-// For Accordion
-// const accordionButtons = document.querySelectorAll("#accordionBtn");
-// const accordionContents = document.querySelectorAll(".accordion__content");
-// accordionButtons.forEach((button, index) => {
-//   button.addEventListener("click", () => {
-//     accordionContents[index].classList.toggle("visible");
-//   });
-// });
