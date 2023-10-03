@@ -1,9 +1,8 @@
-
 /* Variables */
 :root {
   --clr-primary-50: hsla(240, 100%, 96%, 1);
   --clr-primary-300: hsla(234, 100%, 75%, 1);
-  --clr-primary-400: hsla(234, 100%, 69%, 0.9);
+  --clr-primary-400: hsla(234, 100%, 69%, 1);
   --clr-primary-500: hsla(223, 88%, 59%, 1);
   --clr-primary-600: hsla(234, 97%, 62%, 1);
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
@@ -171,7 +170,7 @@ select {
   right: 0;
   z-index: 9999;
   width: 2rem;
-  background: url('./images/icon-hamburger.svg');
+  background: url("./images/icon-hamburger.svg");
   background-repeat: no-repeat;
   transform: translateY(-50%);
   border: 0;
@@ -259,53 +258,53 @@ select {
   position: absolute;
 }
 
-.rectangle4 {
+.hero-wrapper .rectangle4 {
   top: 10px;
   right: -100px;
 }
 
-.ellipse3 {
+.hero-wrapper .ellipse3 {
   top: 90px;
   right: -180px;
 }
 
-.rectangle7 {
+.hero-wrapper .rectangle7 {
   top: 110px;
   left: 130px;
   rotate: 45deg;
 }
 
-.ellipse5 {
+.hero-wrapper .ellipse5 {
   top: 122px;
   left: 134px;
 }
 
-.rectangle6 {
+.hero-wrapper .rectangle6 {
   top: 70px;
   left: -70px;
 }
 
-.ellipse11 {
+.hero-wrapper .ellipse11 {
   top: 100px;
   left: -45px;
 }
 
-.ellipse12 {
+.hero-wrapper .ellipse12 {
   bottom: 190px;
   right: 40px;
 }
 
-.ellipse13 {
+.hero-wrapper .ellipse13 {
   bottom: 156px;
   right: 50px;
 }
 
-.ellipse4 {
+.hero-wrapper .ellipse4 {
   bottom: 40px;
   right: 140px;
 }
 
-.rectangle5 {
+.hero-wrapper .rectangle5 {
   bottom: 10px;
   right: 160px;
 }
@@ -315,53 +314,53 @@ select {
     padding: 12rem 5rem 8rem 5rem;
   }
 
-  .rectangle4 {
+  .hero-wrapper .rectangle4 {
     top: 50px;
     right: 10px;
   }
 
-  .ellipse3 {
+  .hero-wrapper .ellipse3 {
     top: 130px;
     right: -50px;
   }
 
-  .rectangle7 {
+  .hero-wrapper .rectangle7 {
     top: 153px;
     left: 49%;
     rotate: 180deg;
   }
 
-  .ellipse5 {
+  .hero-wrapper .ellipse5 {
     top: 170px;
     left: 50%;
   }
 
-  .rectangle6 {
+  .hero-wrapper .rectangle6 {
     top: 90px;
     left: 0;
   }
 
-  .ellipse11 {
+  .hero-wrapper .ellipse11 {
     top: 150px;
     left: 40px;
   }
 
-  .ellipse12 {
+  .hero-wrapper .ellipse12 {
     bottom: 70px;
     left: 120px;
   }
 
-  .ellipse13 {
+  .hero-wrapper .ellipse13 {
     bottom: 35px;
     left: 100px;
   }
 
-  .ellipse4 {
+  .hero-wrapper .ellipse4 {
     bottom: 40px;
     right: 270px;
   }
 
-  .rectangle5 {
+  .hero-wrapper .rectangle5 {
     bottom: 10px;
     right: 290px;
   }
@@ -471,7 +470,7 @@ select {
 
 /* Footer Myself */
 .footer {
-  padding: 6rem 0;
+  padding: 6rem 0 0 0;
   background: var(--clr-neutral-100);
   border-top-right-radius: 90px;
   box-shadow: 1px 4px 8px -2px rgba(0, 0, 0, 0.57);
@@ -565,6 +564,150 @@ select {
   .accordion__li {
     min-width: 6rem;
     flex-direction: column;
+  }
+}
+
+/* Form */
+.contact {
+  display: grid;
+  place-content: center;
+  position: relative;
+  margin-top: 8rem;
+  background: var(--clr-primary-400);
+  text-align: center;
+  border-top-left-radius: 90px;
+  overflow: hidden;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 7.5rem 0 4rem 0;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  gap: 1rem;
+}
+
+.contact__form > * {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--clr-neutral-200);
+}
+
+.contact__form--input::placeholder {
+  font-size: var(--fs-450);
+  color: var(--clr-neutral-800);
+}
+
+.contact__form--textarea {
+  text-align: left;
+  font-size: var(--fs-450);
+  color: var(--clr-neutral-800);
+  white-space: nowrap;
+  resize: none;
+}
+
+.contact__form--button {
+  max-width: fit-content;
+  padding: 0.75rem;
+  background: var(--clr-neutral-100);
+  font-weight: 500;
+  color: var(--clr-primary-400);
+  border: 1px solid var(--clr-primary-400);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.contact__form--button:active {
+  box-shadow:
+    inset 5px 5px 3px -3px var(--clr-primary-400),
+    inset -5px -5px 3px -3px var(--clr-primary-400),
+    inset 5px -5px 3px -3px var(--clr-primary-400),
+    inset -5px 5px 3px -3px var(--clr-primary-400);
+}
+
+.contact .svg-contact {
+  position: absolute;
+}
+
+.contact .rectangle4 {
+  top: 15px;
+  right: -22px;
+}
+
+.contact .ellipse3 {
+  top: 55px;
+  right: -50px;
+}
+
+.contact .ellipse12 {
+  top: 60px;
+  right: 52%;
+}
+
+.contact .rectangle7 {
+  bottom: 5%;
+  right: 8%;
+}
+
+.contact .ellipse5 {
+  bottom: 4%;
+  right: 20%;
+}
+
+.contact .rectangle6 {
+  display: none;
+}
+
+.contact .ellipse11 {
+  display: none;
+}
+
+.contact .ellipse13 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-wrapper {
+    max-width: 500px;
+  }
+
+  .contact__form {
+    align-items: center;
+  }
+
+  .contact .rectangle7 {
+    top: 320px;
+    left: 55px;
+  }
+
+  .contact .ellipse5 {
+    top: 360px;
+    left: 55px;
+  }
+
+  .contact .rectangle6 {
+    display: block;
+    bottom: 80px;
+    left: 128px;
+  }
+
+  .contact .ellipse11 {
+    display: block;
+    bottom: 64px;
+    left: 160px;
+  }
+
+  .contact .ellipse13 {
+    display: block;
+    bottom: 130px;
+    right: 50px;
   }
 }
 
