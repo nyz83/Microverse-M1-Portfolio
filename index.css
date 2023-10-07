@@ -1,20 +1,20 @@
 /* Variables */
 :root {
-  --clr-primary-50: hsla(240, 100%, 96%, 1);
-  --clr-primary-300: hsla(234, 100%, 75%, 1);
-  --clr-primary-400: hsla(234, 100%, 69%, 1);
-  --clr-primary-500: hsla(223, 88%, 59%, 1);
-  --clr-primary-600: hsla(234, 97%, 62%, 1);
-  --clr-neutral-100: hsla(0, 0%, 100%, 1);
-  --clr-neutral-150: hsla(223, 12%, 89%, 1);
-  --clr-neutral-200: hsla(198, 16%, 84%, 1);
-  --clr-neutral-250: hsla(217, 13%, 74%, 1);
-  --clr-neutral-300: hsla(217, 14%, 54%, 1);
-  --clr-neutral-400: hsla(218, 20%, 39%, 1);
-  --clr-neutral-600: hsla(218, 31%, 30%, 1);
-  --clr-neutral-700: hsla(218, 41%, 25%, 1);
-  --clr-neutral-800: hsla(218, 54%, 20%, 1);
-  --clr-neutral-900: hsla(0, 0%, 0%, 1);
+  --clr-primary-50: hsl(240, 100%, 96%);
+  --clr-primary-300: hsl(234, 100%, 75%);
+  --clr-primary-400: hsl(234, 100%, 69%);
+  --clr-primary-500: hsl(223, 88%, 59%);
+  --clr-primary-600: hsl(234, 97%, 62%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-150: hsl(223, 12%, 89%);
+  --clr-neutral-200: hsl(198, 16%, 84%);
+  --clr-neutral-250: hsl(217, 13%, 74%);
+  --clr-neutral-300: hsl(217, 14%, 54%);
+  --clr-neutral-400: hsl(218, 20%, 39%);
+  --clr-neutral-600: hsl(218, 31%, 30%);
+  --clr-neutral-700: hsl(218, 41%, 25%);
+  --clr-neutral-800: hsl(218, 54%, 20%);
+  --clr-neutral-900: hsl(0, 0%, 0%, 1);
   --ff-primary: "poppins", sans-serif;
   --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-primary);
@@ -161,6 +161,24 @@ select {
   align-items: center;
   justify-content: space-between;
   position: relative;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-logo {
+  animation: rotate 1s ease-in-out;
 }
 
 .nav-wrapper .mobile-nav-toggle {
@@ -433,6 +451,10 @@ select {
     flex-direction: row;
   }
 
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
   .project > * {
     flex: 1;
   }
@@ -453,6 +475,10 @@ select {
 
   .project {
     flex-direction: row;
+  }
+
+  .project:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .project > * {
@@ -888,4 +914,13 @@ select {
 .button:focus-visible {
   background: var(--clr-primary-600);
   color: var(--clr-neutral-100);
+}
+
+.button:active {
+  border: 1px solid var(--clr-neutral-100);
+  box-shadow:
+    inset 5px 5px 3px -3px var(--clr-neutral-100),
+    inset -5px -5px 3px -3px var(--clr-neutral-100),
+    inset 5px -5px 3px -3px var(--clr-neutral-100),
+    inset -5px 5px 3px -3px var(--clr-neutral-100);
 }
