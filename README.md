@@ -57,9 +57,9 @@
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-## Live Demo <a name="live-demo"></a>
+## Live Demo <a name="live-demo">https://nyz83.github.io/microverse-portfolio/</a>
 
-- Will be added in the future
+- You can see the live demo here.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
