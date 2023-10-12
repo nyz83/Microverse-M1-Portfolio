@@ -661,10 +661,7 @@ select {
 }
 
 .contact__form--button:active {
-  box-shadow: inset 5px 5px 3px -3px var(--clr-primary-400),
-    inset -5px -5px 3px -3px var(--clr-primary-400),
-    inset 5px -5px 3px -3px var(--clr-primary-400),
-    inset -5px 5px 3px -3px var(--clr-primary-400);
+  box-shadow: inset 5px 5px 3px -3px var(--clr-primary-400), inset -5px -5px 3px -3px var(--clr-primary-400), inset 5px -5px 3px -3px var(--clr-primary-400), inset -5px 5px 3px -3px var(--clr-primary-400);
 }
 
 .contact .svg-contact {
@@ -915,8 +912,5 @@ select {
 
 .button:active {
   border: 1px solid var(--clr-neutral-100);
-  box-shadow: inset 5px 5px 3px -3px var(--clr-neutral-100),
-    inset -5px -5px 3px -3px var(--clr-neutral-100),
-    inset 5px -5px 3px -3px var(--clr-neutral-100),
-    inset -5px 5px 3px -3px var(--clr-neutral-100);
+  box-shadow: inset 5px 5px 3px -3px var(--clr-neutral-100), inset -5px -5px 3px -3px var(--clr-neutral-100), inset 5px -5px 3px -3px var(--clr-neutral-100), inset -5px 5px 3px -3px var(--clr-neutral-100);
 }
