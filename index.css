@@ -527,7 +527,7 @@ select {
 .modal-wrapper {
   display: none;
   position: fixed;
-  inset: 1em;
+  inset: 3rem 1rem;
   padding-bottom: 1rem;
   background-color: var(--clr-neutral-100);
   border-radius: 0.5rem;
@@ -607,6 +607,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .modal-wrapper {
+    inset: 2.5rem 4rem 2.5rem 4rem;
+  }
+
   .modal__img {
     padding-inline: 2rem;
     background-color: hsl(0, 0%, 83%);
