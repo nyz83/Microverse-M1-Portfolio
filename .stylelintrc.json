@@ -15,7 +15,7 @@
         ]
       }
     ],
-"declaration-block-semicolon-newline-after": null
+    "declaration-block-semicolon-newline-after": null
   },
   "csstree/validator": true,
   "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
