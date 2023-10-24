@@ -607,6 +607,11 @@ select {
 }
 
 @media (min-width: 768px) {
+  .modal__img {
+    padding-inline: 2rem;
+    background-color: hsl(0, 0%, 83%);
+  }
+
   .grid-columns {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
