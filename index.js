@@ -112,3 +112,28 @@ form.addEventListener('submit', (event) => {
 
   form.submit();
 });
+
+// Local Storage
+const inputFields = document.querySelectorAll('#formInput');
+
+function saveFormData() {
+  const formData = {};
+  inputFields.forEach((inputField) => {
+    formData[inputField.name] = inputField.value;
+    const jsonFormData = JSON.stringify(formData);
+    localStorage.setItem('formData', jsonFormData);
+  });
+}
+function loadFormData() {
+  const jsonFormData = localStorage.getItem('formData');
+  if (jsonFormData) {
+    const formData = JSON.parse(jsonFormData);
+    inputFields.forEach((inputField) => {
+      inputField.value = formData[inputField.name];
+    });
+  }
+}
+inputFields.forEach((inputField) => {
+  inputField.addEventListener('change', saveFormData);
+});
+window.addEventListener('load', loadFormData);
