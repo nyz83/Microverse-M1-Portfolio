@@ -679,6 +679,10 @@ select {
   overflow: hidden;
 }
 
+.contact-wrapper > .container {
+  --padding: 1rem;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
