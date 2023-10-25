@@ -86,3 +86,29 @@ navItems.forEach((navItem) => navItem.addEventListener('click', () => {
   mobileNavToggle.setAttribute('aria-expanded', false);
   document.body.classList.remove('mobile-navigation-open');
 }));
+
+// Validation
+const form = document.querySelector('.contact__form');
+const emailInput = document.querySelector('input[name="email"]');
+const submitButton = document.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const email = emailInput.value;
+  const lowercaseEmail = email.toLowerCase();
+
+  if (email !== lowercaseEmail) {
+    const errorMessage = document.createElement('div');
+    errorMessage.classList.add('error-message');
+    errorMessage.textContent = 'The email address must be in lowercase.';
+    submitButton.appendChild(errorMessage);
+    emailInput.addEventListener('input', () => {
+      const errorMessage = submitButton.querySelector('.error-message');
+      if (errorMessage) errorMessage.remove();
+    });
+    return;
+  }
+
+  form.submit();
+});

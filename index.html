@@ -11,39 +11,34 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="nav-wrapper">
-        <div class="nav-logo | text-primary-400">My Logo</div>
-        <button class="mobile-nav-toggle" type="button" aria-controls="nav-list"
-          aria-expanded="false">
-          <span class="sr-only">Menu</span>
-        </button>
-        <nav class="fs-nav">
-          <ul id="nav-list" class="primary-navigation" data-visible="false" aria-label="primary">
-            <li>
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
+    <div class="nav-wrapper">
+      <div class="container">
+        <div class="header__nav">
+          <div class="nav-logo | text-primary-400">My Logo</div>
+          <button class="mobile-nav-toggle" type="button" aria-controls="nav-list"
+            aria-expanded="false">
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav class="fs-nav">
+            <ul id="nav-list" class="primary-navigation" data-visible="false" aria-label="primary">
+              <li>
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div class="hero-wrapper">
-        <img class="svg-hero rectangle4" src="images/Rectangle 4.svg">
-        <img class="svg-hero ellipse3" src="images/Ellipse 3.svg">
-        <img class="svg-hero rectangle7" src="images/Rectangle 7.svg">
-        <img class="svg-hero ellipse5" src="images/Ellipse 5.svg">
-        <img class="svg-hero rectangle6" src="images/Rectangle 6.svg">
-        <img class="svg-hero ellipse11" src="images/Ellipse11.svg">
-        <img class="svg-hero ellipse12" src="images/Ellipse 12.svg">
-        <img class="svg-hero ellipse13" src="images/Ellipse 13.svg">
-        <img class="svg-hero ellipse4" src="images/Ellipse 4.svg">
-        <img class="svg-hero rectangle5" src="images/Rectangle 5.svg">
-        <section class="header-hero">
+    </div>
+
+    <div class="hero-wrapper">
+      <div class="container">
+        <section class="header__hero">
           <h1 class="line-height-primary-heading fs-primary-heading fw-bold text-neutral-800">
             I’m NyiYeZin. <br>
             Glad to see you!
@@ -74,8 +69,10 @@
           </div>
         </section>
       </div>
+
     </div>
   </header>
+
   <main class="main">
     <div class="container">
       <div id="projectsContainer" class="sections-wrapper">
@@ -176,14 +173,16 @@
             </div>
           </div>
         </template>
+
       </div>
     </div>
     </div>
   </main>
+
   <footer class="footer">
-    <section id="about" class="myself">
+    <div class="myself-wrapper">
       <div class="container">
-        <div class="footer-wrapper">
+        <section class="myself">
           <div class="myself__know-more">
             <h2 class="capitalize fs-800 text-neutral-800">about myself</h2>
             <p class="text-neutral-600">
@@ -261,20 +260,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
-    <section id="contact" class="contact">
-      <img class="svg-contact rectangle4" src="./images/Rectangle 4contact.svg">
-      <img class="svg-contact ellipse3" src="./images/Ellipse 3contact.svg">
-      <img class="svg-contact ellipse12" src="./images/Ellipse 12contact.svg">
-      <img class="svg-contact rectangle7" src="./images/Rectangle 7contact.svg">
-      <img class="svg-contact ellipse5" src="./images/Ellipse 5contact.svg">
-      <img class="svg-contact rectangle6" src="./images/Rectangle 6contact.svg">
-      <img class="svg-contact ellipse11" src="./images/Ellipse 11contact.svg">
-      <img class="svg-contact ellipse13" src="./images/Ellipse 13contact.svg">
-      <div class="container">
-        <div class="contact-wrapper">
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="container" style="--padding: 1rem">
+        <section class="contact">
           <h2 class="capitalize fs-800 fw-bold text-neutral-100">contact me</h2>
           <p class="fs-550 text-footer-paragraph">
             If you have an application you are interested in developing, a
@@ -291,9 +283,9 @@
               placeholder="Write your message here..." required></textarea>
             <button class="default-button | capitalize" type="submit">get in touch</button>
           </form>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
   </footer>
 </body>
 
