@@ -1,0 +1,51 @@
+function renderModal(project) {
+  const { title, img, desc, metas, stacks } = project;
+
+  const template = document.querySelector('#modalTemplate');
+  const templateClone = document.importNode(template.content, true);
+
+  templateClone.querySelector('#modalImg').src = img;
+  templateClone.querySelector('#modalTitle').textContent = title;
+  templateClone.querySelector('#modalDesc').textContent = desc;
+
+  metas.forEach((meta) => {
+    const metaElement = document.createElement('li');
+    metaElement.textContent = meta;
+    templateClone.querySelector('#modalMeta').appendChild(metaElement);
+  });
+
+  stacks.forEach((stack) => {
+    const stackElement = document.createElement('li');
+    stackElement.textContent = stack;
+    templateClone.querySelector('#modalStacks').appendChild(stackElement);
+  });
+
+  document.body.appendChild(templateClone);
+}
+
+function renderProject(project) {
+  const {
+    title, img, desc, metas, stacks,
+  } = project;
+
+  const template = document.querySelector('#projectTemplate');
+  const templateClone = document.importNode(template.content, true);
+
+  templateClone.querySelector('#projectTitle').textContent = title;
+  templateClone.querySelector('#projectDesc').textContent = desc;
+  templateClone.querySelector('#projectImg').src = img;
+
+  metas.forEach((meta) => {
+    const metaElement = document.createElement('li');
+    metaElement.textContent = meta;
+    templateClone.querySelector('#projectMeta').appendChild(metaElement);
+  });
+
+  stacks.forEach((stack) => {
+    const stackElement = document.createElement('li');
+    stackElement.textContent = stack;
+    templateClone.querySelector('#projectStacks').appendChild(stackElement);
+  });
+
+  projectsWrapper.appendChild(templateClone);
+}
