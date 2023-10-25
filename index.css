@@ -1,4 +1,9 @@
-/* Variables */
+/**
+ * Variables
+ *
+ * @format
+ */
+
 :root {
   --clr-primary-400: hsl(234, 100%, 69%);
   --clr-neutral-100: hsl(0, 0%, 100%);
@@ -185,9 +190,8 @@ select {
 
 /* Header */
 .header {
-  position: relative;
   padding-block: 1rem;
-  background: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-100);
   box-shadow: 1px 4px 8px -2px rgba(0, 0, 0, 0.57);
   -webkit-box-shadow: 1px 4px 8px -2px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 1px 4px 8px -2px rgba(0, 0, 0, 0.57);
@@ -195,14 +199,18 @@ select {
   border-bottom-left-radius: 90px;
 }
 
-.nav-wrapper {
+.nav-wrapper > .container {
+  --padding: 1rem;
+}
+
+.header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
 
-.nav-wrapper .mobile-nav-toggle {
+.header__nav .mobile-nav-toggle {
   display: block;
   position: absolute;
   top: 65%;
@@ -257,8 +265,12 @@ select {
 }
 
 @media (min-width: 768px) {
-  .nav-wrapper .mobile-nav-toggle {
+  .header__nav .mobile-nav-toggle {
     display: none;
+  }
+
+  .nav-wrapper > .container {
+    --padding: 4rem;
   }
 
   .primary-navigation {
@@ -279,128 +291,32 @@ select {
 
 /* Header Hero */
 .hero-wrapper {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  background-image: url("./images/HeaderBgDesktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.header-hero {
+.hero-wrapper > .container {
+  --padding: 1rem;
+}
+
+.header__hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 8rem;
   gap: 0.75rem;
-}
-
-.hero-wrapper .svg-hero {
-  position: absolute;
-}
-
-.hero-wrapper .rectangle4 {
-  top: 0.625rem;
-  right: -6.25rem;
-}
-
-.hero-wrapper .ellipse3 {
-  top: 5.625rem;
-  right: -11rem;
-}
-
-.hero-wrapper .rectangle7 {
-  top: 6.875rem;
-  left: 8.125rem;
-  rotate: 45deg;
-}
-
-.hero-wrapper .ellipse5 {
-  top: 7.625rem;
-  left: 8.375rem;
-}
-
-.hero-wrapper .rectangle6 {
-  top: 4.375rem;
-  left: -4.375rem;
-}
-
-.hero-wrapper .ellipse11 {
-  top: 6.25rem;
-  left: -2.813rem;
-}
-
-.hero-wrapper .ellipse12 {
-  bottom: 11.875rem;
-  right: 2.5rem;
-}
-
-.hero-wrapper .ellipse13 {
-  bottom: 9.75rem;
-  right: 3.125rem;
-}
-
-.hero-wrapper .ellipse4 {
-  bottom: 2.5rem;
-  right: 8.75rem;
-}
-
-.hero-wrapper .rectangle5 {
-  bottom: 0.625rem;
-  right: 10rem;
+  padding-block: 8rem;
 }
 
 @media (min-width: 768px) {
-  .header-hero {
-    padding: 12rem 5rem 8rem 5rem;
+  .hero-wrapper {
+    background-image: url("./images/HeaderBgDesktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  .hero-wrapper .rectangle4 {
-    top: 3.125rem;
-    right: 0.625rem;
-  }
-
-  .hero-wrapper .ellipse3 {
-    top: 8.125rem;
-    right: -3.125rem;
-  }
-
-  .hero-wrapper .rectangle7 {
-    top: 9.5625rem;
-    left: 50%;
-    transform: rotate(180deg);
-  }
-
-  .hero-wrapper .ellipse5 {
-    top: 10.625rem;
-    left: 50%;
-  }
-
-  .hero-wrapper .rectangle6 {
-    top: 5.625rem;
-    left: 0;
-  }
-
-  .hero-wrapper .ellipse11 {
-    top: 9.375rem;
-    left: 2.5rem;
-  }
-
-  .hero-wrapper .ellipse12 {
-    bottom: 4.375rem;
-    left: 7.5rem;
-  }
-
-  .hero-wrapper .ellipse13 {
-    bottom: 2.1875rem;
-    left: 6.25rem;
-  }
-
-  .hero-wrapper .ellipse4 {
-    bottom: 2.5rem;
-    right: 16.875rem;
-  }
-
-  .hero-wrapper .rectangle5 {
-    bottom: 0.625rem;
-    right: 18.125rem;
+  .hero-wrapper > .container {
+    --padding: 10rem;
   }
 }
 
@@ -520,7 +436,7 @@ select {
   overflow: hidden;
 }
 
-.modal-overlay[overlay-visible='true'] {
+.modal-overlay[overlay-visible="true"] {
   display: block;
 }
 
@@ -656,7 +572,7 @@ select {
   -moz-box-shadow: 1px 4px 8px -2px rgba(82, 75, 75, 0.57);
 }
 
-.footer-wrapper {
+.myself {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -664,7 +580,7 @@ select {
   gap: 1.5rem;
 }
 
-.myself {
+.myself-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -687,11 +603,11 @@ select {
 }
 
 @media (min-width: 768px) {
-  .footer-wrapper {
+  .myself {
     flex-direction: row;
   }
 
-  .footer-wrapper > * {
+  .myself > * {
     flex: 1;
   }
 }
@@ -750,22 +666,28 @@ select {
 }
 
 /* Form */
-.contact {
+.contact-wrapper {
   display: grid;
   place-content: center;
-  position: relative;
   margin-top: 8rem;
-  background: var(--clr-primary-400);
+  background-color: var(--clr-primary-400);
+  background-image: url("./images/ContactBgMobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   border-top-left-radius: 90px;
   overflow: hidden;
 }
 
-.contact-wrapper {
+.contact-wrapper > .container {
+  --padding: 1rem;
+}
+
+.contact {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-block: 7.5rem 4rem;
+  padding-block: 8rem 4rem;
 }
 
 .contact__form {
@@ -803,84 +725,48 @@ select {
   --button-hover-bg: var(--clr-neutral-100);
   --button-hover-color: var(--clr-primary-400);
   --button-active-color: var(--clr-primary-400);
+
+  position: relative;
 }
 
-.contact .svg-contact {
+.error-message {
   position: absolute;
-}
-
-.contact .rectangle4 {
-  top: 0.95rem;
-  right: -1.05rem;
-}
-
-.contact .ellipse3 {
-  top: 3.125rem;
-  right: -3.05rem;
-}
-
-.contact .ellipse12 {
-  top: 3.7rem;
   left: 50%;
+  bottom: -3rem;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+  background-color: hsl(0, 80%, 94%);
+  border: none;
+  color: hsl(345, 100%, 40%);
+  white-space: nowrap;
 }
 
-.contact .rectangle7 {
-  bottom: 1.5rem;
-  right: 1.8rem;
+.error-message::after,
+.error-message::before {
+  content: '';
+  border: 7px solid transparent;
+  position: absolute;
+  top: 10px;
 }
 
-.contact .ellipse5 {
-  bottom: 1.5rem;
-  right: 5.5rem;
-}
-
-.contact .rectangle6 {
-  display: none;
-}
-
-.contact .ellipse11 {
-  display: none;
-}
-
-.contact .ellipse13 {
-  display: none;
+.error-message::before {
+  border-bottom: 7px solid hsl(0, 80%, 94%);
+  top: -12px;
 }
 
 @media (min-width: 768px) {
   .contact-wrapper {
+    background-image: url("./images/ContactBgDesktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact {
     max-width: 500px;
   }
 
   .contact__form {
     align-items: center;
-  }
-
-  .contact .rectangle7 {
-    top: 20rem;
-    left: 3.438rem;
-  }
-
-  .contact .ellipse5 {
-    top: 22.5rem;
-    left: 3.438rem;
-  }
-
-  .contact .rectangle6 {
-    display: block;
-    bottom: 5rem;
-    left: 8rem;
-  }
-
-  .contact .ellipse11 {
-    display: block;
-    bottom: 4rem;
-    left: 10rem;
-  }
-
-  .contact .ellipse13 {
-    display: block;
-    bottom: 8.125rem;
-    right: 3.125rem;
   }
 }
 
