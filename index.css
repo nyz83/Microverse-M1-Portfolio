@@ -706,12 +706,12 @@ select {
   border: 1px solid var(--border);
 }
 
-.contact__form--input::placeholder {
+.form__input::placeholder {
   font-size: var(--fs-450);
   color: var(--clr-neutral-800);
 }
 
-.contact__form--textarea {
+.form__textarea {
   text-align: left;
   font-size: var(--fs-450);
   color: var(--clr-neutral-800);
